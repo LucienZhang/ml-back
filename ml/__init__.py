@@ -1,4 +1,6 @@
 from fastapi import FastAPI, File, UploadFile
+from fastapi.logger import logger
+import logging
 from starlette.middleware.cors import CORSMiddleware
 import requests
 from PIL import Image
@@ -6,6 +8,10 @@ import numpy as np
 import json
 
 from ml.core.config import settings
+
+gunicorn_logger = logging.getLogger('gunicorn.error')
+logger.handlers = gunicorn_logger.handlers
+logger.setLevel(gunicorn_logger.level)
 
 app = FastAPI()
 
