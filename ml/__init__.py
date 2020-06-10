@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Form
 from starlette.middleware.cors import CORSMiddleware
 
-from werewolf.core.config import settings
+from ml.core.config import settings
 
 app = FastAPI()
 
