@@ -6,3 +6,6 @@ ujson
 python-multipart
 python-dotenv
 gunicorn==20.0.4
+requests
+pillow
+numpy
