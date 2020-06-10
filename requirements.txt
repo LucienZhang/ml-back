@@ -1,0 +1,8 @@
+# python==3.7.7
+uvicorn
+fastapi==0.55.1
+
+ujson
+python-multipart
+python-dotenv
+gunicorn==20.0.4
