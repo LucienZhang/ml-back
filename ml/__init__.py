@@ -2,7 +2,7 @@ from fastapi import FastAPI, File, UploadFile
 from fastapi.logger import logger
 import logging
 from starlette.middleware.cors import CORSMiddleware
-import requests
+import requests_async as requests
 from PIL import Image
 import numpy as np
 import json
