@@ -39,4 +39,4 @@ async def mnist(*, img: UploadFile = File(...)):
     predictions = np.array(json.loads(json_response.text)['predictions'])
     result = np.argmax(predictions, axis=-1)[0].item()
     prob = '{:.2%}'.format(np.max(predictions, axis=-1)[0].item())
-    return json.dumps(dict(result=result, prob=prob))
+    return dict(result=result, prob=prob)
