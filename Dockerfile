@@ -5,5 +5,5 @@ ENV LANG en_US.UTF-8
 
 COPY . .
 RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
+    pip install --no-cache-dir -r requirements.txt
 CMD [ "gunicorn", "ml:app", "-c", "./gunicorn.conf.py" ]
